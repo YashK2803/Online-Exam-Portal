@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Portal Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #dfe9f3, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .box {
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form_group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #f7f7f7;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 10px rgba(0, 86, 179, 0.2);
+            background: #fff;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s ease-in-out;
+        }
+
+        .signup-btn {
+            background: linear-gradient(135deg, #004085, #002855);
+            color: white;
+        }
+
+        .signup-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #002855, #001a3d);
+        }
+
+        .login-btn {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+            background: #d6d6d6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Exam Portal Sign Up</h2>
+        <form action="signup.php" method="post">
+            <div class="form_group">
+                <label for="student_id">Student ID:</label>
+                <input type="number" id="student_id" name="signup_sid" placeholder="Enter Student ID" required>
+            </div>
+            <div class="form_group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="signup_first_name" placeholder="Enter First Name" required>
+            </div>
+            <div class="form_group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="signup_last_name" placeholder="Enter Last Name" required>
+            </div>
+            <div class="form_group">
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="signup_branch" placeholder="Enter Branch" required>
+            </div>
+            <div class="form_group">
+                <label for="email">Email ID:</label>
+                <input type="text" id="email" name="signup_email" placeholder="Enter Email ID" required>
+            </div>
+            <div class="form_group">
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="phone" name="signup_phone" placeholder="Enter Phone No" required>
+            </div>
+            <div class="form_group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="signup_password" placeholder="Enter Password" required>
+            </div>
+            <div class="form_group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="signup_confirm_password" placeholder="Confirm Password" required>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <p>Already have an account?</p>
+                <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
